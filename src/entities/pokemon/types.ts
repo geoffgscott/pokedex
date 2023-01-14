@@ -20,8 +20,8 @@ export type Pokemon = {
   name: string
   order: number
   sprites: {
-    back_default?: string
-    front_default?: string
+    back_default?: string | null
+    front_default?: string | null
     other: {
       'official-artwork': {
         front_default?: string

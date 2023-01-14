@@ -3,7 +3,7 @@ import styles from './PokeLoader.module.css'
 
 type Props = {
   isLoading: boolean
-  altLoader: boolean
+  altLoader?: boolean
 }
 
 export default function PokeLoader({ isLoading = true, altLoader = false }: Props) {

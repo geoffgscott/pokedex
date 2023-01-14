@@ -1,6 +1,5 @@
 import { z, ZodSchema, ZodTypeDef } from 'zod'
 import {
-  PokeColors,
   Pokemon,
   PokemonEvolutionChain,
   PokemonEvolutionLink,

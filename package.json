@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "vite",
     "typecheck": "tsc",
+    "lint": "eslint . --fix",
     "format": "prettier --write src",
     "build": "tsc && vite build",
     "test:unit": "vitest",
