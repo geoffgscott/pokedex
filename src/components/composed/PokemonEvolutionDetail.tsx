@@ -18,7 +18,11 @@ export default function PokemonEvolutionDetail({ id, onClick }: Props) {
       {pokemon.data && (
         <button type='button' onClick={() => onClick(id)} className={styles.evolutionDetail}>
           <img
-            src={pokemon.data?.sprites.front_default ?? pokemon.data?.sprites.other['official-artwork'].front_default}
+            src={
+              pokemon.data?.sprites.front_default ??
+              pokemon.data?.sprites.other['official-artwork'].front_default ??
+              'pokeball.svg'
+            }
             alt={`${pokemon.data.name} sprite`}
           />
           {capitalizeFirst(pokemon.data.name)}

@@ -15,7 +15,7 @@ export default function PokemonImage({ pokemon }: Props) {
       <img
         className={combineClass(styles.pokemonImage, isLoading && styles.hide)}
         onLoad={() => setIsLoaded(false)}
-        src={pokemon.sprites.other['official-artwork'].front_default}
+        src={pokemon.sprites.other['official-artwork'].front_default ?? 'pokeball.svg'}
         alt={`${pokemon.name} sprite`}
       />
       {isLoading && <PokeLoader isLoading />}

@@ -50,8 +50,8 @@ export const pokemonSchema: ZodSchema<Pokemon, ZodTypeDef, unknown> = z.object({
     front_default: z.string().optional().nullable(),
     other: z.object({
       'official-artwork': z.object({
-        front_default: z.string(),
-        front_shiny: z.string().optional().default(''),
+        front_default: z.string().optional().nullable(),
+        front_shiny: z.string().optional().nullable().default(''),
       }),
     }),
   }),
