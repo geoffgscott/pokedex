@@ -1,0 +1,60 @@
+.dropdownCont {
+  --border-width: 3px;
+  --border: var(--border-width) solid black;
+
+  position: relative;
+  display: flex;
+  height: 3rem;
+}
+
+.dropdownCont:focus-within .dropdown {
+  display: flex;
+}
+
+.input {
+  flex: 1;
+  min-width: 20rem;
+  padding: 0.5rem;
+  border: var(--border);
+  border-radius: 0.3rem;
+}
+
+.input::placeholder {
+  color: black;
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  top: calc(100% - var(--border-width));
+  left: 0;
+  width: 100%;
+  flex-direction: column;
+  border: var(--border);
+  border-radius: 0.3rem;
+
+  max-height: calc(24rem + calc(2 * var(--border-width)));
+  overflow-y: auto;
+}
+
+.dropdownEntry {
+  border: none;
+  min-height: 3rem;
+  height: 3rem;
+}
+
+.dropdownEntry:hover,
+.dropdownEntry:focus {
+  background-color: rgb(105, 47, 47);
+}
+
+.noMatch {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  min-height: 3rem;
+  height: 3rem;
+  text-align: center;
+
+  user-select: none;
+}

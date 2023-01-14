@@ -1,0 +1,116 @@
+.page {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  --border: 3px solid black;
+}
+
+.pokedex {
+  max-width: 70rem;
+  min-width: min(100vw, 70rem);
+
+  box-shadow: 10px 10px 0px 0px rgb(80, 70, 70);
+  margin: 5rem auto;
+  border-radius: 0.5rem;
+  border: var(--border);
+  background-color: var(--color-primary);
+  color: var(--font-contrast);
+}
+
+.header {
+  position: relative;
+  height: 10rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 0 2rem;
+}
+
+.header > svg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  max-width: 100%;
+  stroke: black;
+  stroke-width: 3px;
+  fill: none;
+  background-color: transparent;
+  pointer-events: none;
+}
+
+.onLight {
+  --size: 5rem;
+
+  height: var(--size);
+  width: var(--size);
+  border: var(--border);
+  border-radius: 50%;
+  background-color: #4584c7;
+  transition: background-color 0.3s linear;
+}
+
+.onLight:hover {
+  background-color: #69a3e2;
+}
+
+.displaySection {
+  display: flex;
+  gap: 2rem;
+  padding: 3rem;
+}
+
+.screenBorder {
+  flex: 1;
+  display: flex;
+  min-height: 40rem;
+  min-width: 0;
+  padding: 2rem;
+
+  background-color: rgb(174, 174, 174);
+  border: var(--border);
+  border-radius: 0.5rem;
+}
+
+.screen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  min-height: 0;
+  flex: 1;
+  border: var(--border);
+  background-color: black;
+}
+
+.infoSection {
+  display: flex;
+  min-height: 23rem;
+  margin: 3rem;
+  margin-top: 0rem;
+}
+
+.infoContent {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  min-width: 0;
+  flex: 1;
+}
+
+@media (max-width: 700px) {
+  .pokedex {
+    box-shadow: none;
+    margin: 0;
+    border: none;
+  }
+
+  .displaySection {
+    flex-direction: column;
+  }
+
+  .infoSection {
+    flex-direction: column;
+  }
+}
