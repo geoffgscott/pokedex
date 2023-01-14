@@ -1,3 +1,21 @@
+# Application
+
+```
+pnpm install
+```
+
+To start dev server:
+
+```
+pnpm dev
+```
+
+To run the worlds smallest unit test suite:
+
+```
+pnpm test:unit
+```
+
 # TODO
 
 Uncommit .env file in favour of .env.example. Committing .env for tester convenience.
