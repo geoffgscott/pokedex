@@ -1,5 +1,7 @@
 .pokeLoader {
+  flex: 1;
   fill: #fff;
+  stroke: none;
   background-color: transparent;
 }
 

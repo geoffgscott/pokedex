@@ -9,7 +9,8 @@ type OptionProps = {
 }
 function OptionButton({ label, onClick, onFocus }: OptionProps) {
   return (
-    <button className={styles.dropdownEntry} onFocus={onFocus} onClick={onClick} type='button'>
+    // onMouseDown used to avoid iOS blur firing before click handling
+    <button className={styles.dropdownEntry} onFocus={onFocus} onMouseDown={onClick} type='button'>
       {label}
     </button>
   )
@@ -80,10 +81,9 @@ export default function SearchInput({ options, onSelect }: Props) {
   const handleListSelect = (idx: number) => {
     onSelect(filteredOptions[idx].value)
     setSearch('')
-    if (listRef.current) {
-      const button = listRef.current.children[focusedIdx] as HTMLButtonElement
-      button?.blur?.()
-    }
+
+    const target = document.activeElement as HTMLButtonElement | undefined
+    target?.blur?.()
   }
   return (
     // eslint-disable-next-line jsx-a11y/no-static-element-interactions
